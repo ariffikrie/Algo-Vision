@@ -5,52 +5,6 @@ Algorithm visualizer For python language.
 
 
 
-# **TECH STACK**
-- `FRONT-END` 
-`﻿REACTjs (applying FIGMA API)` : Why React? React is current most famous front-end meaning we can easily apply the knowledge later for job in future. 
-
-
-
-- `﻿Code Editor` 
-`VS-Code` : I just like it. 
-
-
-
-- `﻿BACKEND` 
-`﻿Code Executioner` : Judge0 
-
-`﻿FireBase` :
-
-`﻿Google CLoud` :
-
-`﻿TypeScript/JavaScript` : Enable feature functionality that are in Front-End. 
-
-`﻿Web-Server` : To be Decided later. 
-
-
-
----
-
-`FRONT-END` 
-
-
-
-
-
----
-
-`﻿Code Editor` 
-
-
-
-
-
----
-
-`﻿BACKEND` 
-
-
-
 
 
 <!--- Eraser file: https://app.eraser.io/workspace/u0Rsf5nmUUdLoqNG3dwz --->
