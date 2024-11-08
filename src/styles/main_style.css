@@ -1,0 +1,24 @@
+body {
+    background-color: #f0e68c; /* Light Khaki */
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #556b2f; /* Dark Olive Green */
+}
+
+button {
+    background-color: #6b8e23; /* Olive Drab */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #556b2f;
+}

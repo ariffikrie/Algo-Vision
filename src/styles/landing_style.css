@@ -1,0 +1,24 @@
+body {
+    background-color: #f5deb3; /* Wheat */
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #d2691e; /* Chocolate */
+}
+
+button {
+    background-color: #cd853f; /* Peru */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d2691e;
+}
