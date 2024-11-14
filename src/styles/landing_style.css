@@ -4,12 +4,83 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
-h1 {
-    color: #d2691e; /* Chocolate */
+.page-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50vh 50vh;
+    overflow: hidden;
+
 }
 
+.upper-part{
+    overflow: hidden;
+    background-color: aqua;
+}
+.lower-part{
+    display: grid;
+    grid-template-columns: 200px auto 100px;
+    grid-gap: 1rem;
+    overflow: hidden;
+    background-color: greenyellow;
+}
+
+.left{
+    display: flex;
+    align-items: center; 
+    font-size: 1.7rem; 
+    padding: 1rem 2rem;
+    background-color: pink;
+    .name-block{
+        background-color: gray;
+    }
+    p{
+        line-height: 2.5rem;
+        font-weight: 600;
+    }
+}
+
+.middle{
+    /*display: flex;*/
+    align-items: center;
+    padding: 2rem 2rem;
+    .intro-block{
+        /*display: flex;*/
+        align-items: center;
+        background-color: #fff;
+        justify-content: center;
+        border-radius: 25%;
+        padding: 1rem ;
+    }
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .intro-btn{
+        background-color: beige;
+        position: absolute;
+        /*z-index: 10;
+        bottom: 10%;*/
+        right: 3%;
+        .intro{
+            background-color: #d2691e;
+            padding: 1.5rem;
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            border-radius: 45%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0.7rem 0;
+        }
+    }
+}
 button {
     background-color: #cd853f; /* Peru */
     color: #fff;
