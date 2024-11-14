@@ -78,7 +78,7 @@ body.light{
 }
 
 .sidebar li{
-    height: 50px;
+    height: 45px;
     margin-top: 10px;
     list-style: none;
     display: flex;
@@ -301,6 +301,7 @@ body.light .switch::before{
     font-size: 15px;
     margin: 10px;
     padding: 5px;
+    border-radius: 15px;
     color: var(--console-text);
     font-weight: 200;
 }
@@ -312,6 +313,7 @@ body.light .switch::before{
     margin: 10px;
     padding: 5px;
     font-size: 15px;
+    border-radius: 15px;
     color: var(--console-text);
     font-weight: 200;
 }
@@ -323,6 +325,7 @@ body.light .switch::before{
     margin: 10px;
     padding: 5px;
     font-size: 15px;
+    border-radius: 15px;
     color: var(--console-text);
     font-weight: 200;   
 }
