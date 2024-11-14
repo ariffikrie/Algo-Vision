@@ -133,6 +133,7 @@ header .image-text .header-text{
     color: var(--sidebar-color);
     font-size: 22px;
     transition: var(--tran-03);
+    cursor: pointer;
 }
 
 .sidebar.close header .toggle{
@@ -255,7 +256,16 @@ body.light .switch::before{
 }
 
 .home{
+    display: grid;
     position: relative;
+    grid-template-columns: 1.9fr 1.9fr;
+    grid-template-rows: 0.2fr 1.5fr 1.3fr 0.05fr;
+    grid-template-areas: 
+    "text text"
+    "visualizer visualizer"
+    "code console"
+    "footer footer";
+    gap: 0.4rem;
     height: 100vh;
     left: 250px;
     width: calc(100% - 250px);
@@ -264,7 +274,10 @@ body.light .switch::before{
 }
 
 .home .text{
+    grid-area: text;
     font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
     font-weight: 500;
     color: var(--text-color);
     padding: 8px 40px;
@@ -274,3 +287,35 @@ body.light .switch::before{
     left: 88px;
     width: calc(100% - 88px);
 }
+
+.home .visualizer{
+    grid-area: visualizer;
+    background: #444444;
+    text-align: center;
+    font-size: 15px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.home .console{
+    grid-area: console;
+    background: #444444;
+    text-align: center;
+    font-size: 15px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.home .code{
+    grid-area: code;
+    background: #444444;
+    text-align: center;
+    font-size: 15px;
+    color: var(--text-color);
+    font-weight: 500;   
+}
+
+.home .footer{
+    grid-area: footer;
+}
+
