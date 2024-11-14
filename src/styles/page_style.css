@@ -14,6 +14,8 @@
     --primary-color-light: #A6AEBF;
     --toggle-color: #D4F6FF;
     --text-color: #FBFBFB;
+    --console-text: #FAF0E6;
+    --console-block: #3C3D37;
 
     --tran-02: all 0.2s ease;
     --tran-03: all 0.3s ease;
@@ -34,6 +36,8 @@ body.light{
     --primary-color-light: #91bad8;
     --toggle-color: #73a5c6;
     --text-color: #707070;
+    --console-text: #FAF0E6;
+    --console-block: #3C3D37;
 }
 
 /* Sidebar */
@@ -265,12 +269,14 @@ body.light .switch::before{
     "visualizer visualizer"
     "code console"
     "footer footer";
-    gap: 0.4rem;
+    gap: 0.1rem;
     height: 100vh;
     left: 250px;
     width: calc(100% - 250px);
     background: var(--body-color);
     transition: var(--tran-05);
+    justify-content: space-evenly;
+    align-content: space-evenly;
 }
 
 .home .text{
@@ -290,29 +296,35 @@ body.light .switch::before{
 
 .home .visualizer{
     grid-area: visualizer;
-    background: #444444;
+    background: var(--console-block);
     text-align: center;
     font-size: 15px;
-    color: var(--text-color);
-    font-weight: 500;
+    margin: 10px;
+    padding: 5px;
+    color: var(--console-text);
+    font-weight: 200;
 }
 
 .home .console{
     grid-area: console;
-    background: #444444;
+    background: var(--console-block);
     text-align: center;
+    margin: 10px;
+    padding: 5px;
     font-size: 15px;
-    color: var(--text-color);
-    font-weight: 500;
+    color: var(--console-text);
+    font-weight: 200;
 }
 
 .home .code{
     grid-area: code;
-    background: #444444;
+    background: var(--console-block);
     text-align: center;
+    margin: 10px;
+    padding: 5px;
     font-size: 15px;
-    color: var(--text-color);
-    font-weight: 500;   
+    color: var(--console-text);
+    font-weight: 200;   
 }
 
 .home .footer{
