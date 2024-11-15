@@ -298,6 +298,7 @@ body.light .switch::before{
 .home .visualizer{
     grid-area: visualizer;
     background: var(--console-block);
+    position: relative;
     text-align: center;
     font-size: 20px;
     margin: 10px;
@@ -340,10 +341,10 @@ body.light .switch::before{
 
 .home .visualizer .progress{
     display: grid;
-    position: relative;
+    position: absolute;
     border-radius: 25px;
     grid-template-columns: 1fr 1fr 1fr;
-    top: 16.5rem;
+    bottom: 10px;
     border: 2px solid var(--body-color);
     background: var(--body-color);
     height: 50px;
@@ -361,4 +362,23 @@ body.light .switch::before{
     font-size: 30px;
 }
 
+/* .home .visualizer .progress .progress-btn a{
+    display: grid;
+    position: relative;
+    border: 2px solid var(--sidebar-color);
+    border-radius: 30px;
+    background: var(--primary-color);
+    color: var(--text-color);
+    margin: 5px;
+    font-size: 30px;
+}
+
+
+.home .visualizer .progress .progress-btn a:hover{
+    background: var(--primary-color);
+}
+
+.home .visualizer .progress .progress-btn a:hover .icon{
+    color: var(--text-color);
+} */
 
