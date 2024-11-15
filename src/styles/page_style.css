@@ -17,10 +17,11 @@
     --console-text: #FAF0E6;
     --console-block: #3C3D37;
 
+    --tran-01: all 0.1s ease;
     --tran-02: all 0.2s ease;
     --tran-03: all 0.3s ease;
     --tran-04: all 0.4s ease;
-    --tran-05: all 0.4s ease;
+    --tran-05: all 0.5s ease;
 }
 
 body {
@@ -62,7 +63,7 @@ body.light{
     font-size: 16px;
     font-weight: 500;
     color: var(--text-color);
-    transition: var(--tran-02);
+    transition: var(--tran-01);
     white-space: nowrap;
     opacity: 1;
 }
@@ -169,7 +170,7 @@ body.light .sidebar header .toggle{
     align-items: center;
     text-decoration: none;
     border-radius: 6px;
-    transition: var(--tran-04);
+    transition: var(--tran-03);
 }
 
 .sidebar li a:hover{
@@ -298,7 +299,7 @@ body.light .switch::before{
     grid-area: visualizer;
     background: var(--console-block);
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
     margin: 10px;
     padding-top: 5px;
     padding-left: 5px;
@@ -340,9 +341,9 @@ body.light .switch::before{
 .home .visualizer .progress{
     display: grid;
     position: relative;
-    border-radius: 10px;
+    border-radius: 25px;
     grid-template-columns: 1fr 1fr 1fr;
-    top: 16.9rem;
+    top: 16.5rem;
     border: 2px solid var(--body-color);
     background: var(--body-color);
     height: 50px;
@@ -353,8 +354,9 @@ body.light .switch::before{
     display: grid;
     position: relative;
     border: 2px solid var(--sidebar-color);
-    border-radius: 5px;
+    border-radius: 30px;
     background: var(--primary-color);
+    color: var(--text-color);
     margin: 5px;
     font-size: 30px;
 }
