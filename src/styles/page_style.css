@@ -16,6 +16,7 @@
     --text-color: #FBFBFB;
     --console-text: #FAF0E6;
     --console-block: #3C3D37;
+    --button: #AF1740;
 
     --tran-01: all 0.1s ease;
     --tran-02: all 0.2s ease;
@@ -60,7 +61,7 @@ body.light{
 
 /* Adjustable CSS */
 .sidebar .text{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--text-color);
     transition: var(--tran-01);
@@ -72,6 +73,33 @@ body.light{
     opacity: 0;
 }
 
+.sidebar.close .arrow{
+    opacity: 0;
+    transition: var(--tran-01);
+}
+
+.sidebar .arrow{
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+/* .sidebar .sub-menu{
+    background: var(--primary-color-light);
+} */
+
+.sidebar .sub-menu li a{
+    padding: 6px 10px 14px 60px;
+    color: var(--console-block);
+    align-items: center;
+    background: var(--primary-color-light);
+    /* display: none; */
+}
+
+.sidebar.close .sub-menu li a{
+    opacity: 0;
+}
+
 .sidebar .image{
     min-width: 60px;
     display: flex;
@@ -79,8 +107,8 @@ body.light{
 }
 
 .sidebar li{
-    height: 45px;
-    margin-top: 10px;
+    height: 40px;
+    margin-top: 5px;
     list-style: none;
     display: flex;
     align-items: center;
@@ -90,7 +118,7 @@ body.light{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 60px;
+    min-width: 55px;
     font-size: 20px;
 }
 
@@ -282,7 +310,7 @@ body.light .switch::before{
 
 .home .text{
     grid-area: text;
-    font-size: 30px;
+    font-size: 35px;
     text-transform: uppercase;
     text-align: center;
     font-weight: 500;
@@ -339,8 +367,8 @@ body.light .switch::before{
     grid-area: footer;
 }
 
-.home .visualizer .progress{
-    display: grid;
+/* .home .visualizer button{
+    display: flex;
     position: absolute;
     border-radius: 25px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -349,36 +377,42 @@ body.light .switch::before{
     background: var(--body-color);
     height: 50px;
     width: 180px;
-}
-
-.home .visualizer .progress .progress-btn .icon{
-    display: grid;
-    position: relative;
-    border: 2px solid var(--sidebar-color);
-    border-radius: 30px;
-    background: var(--primary-color);
-    color: var(--text-color);
-    margin: 5px;
-    font-size: 30px;
-}
-
-/* .home .visualizer .progress .progress-btn a{
-    display: grid;
-    position: relative;
-    border: 2px solid var(--sidebar-color);
-    border-radius: 30px;
-    background: var(--primary-color);
-    color: var(--text-color);
-    margin: 5px;
-    font-size: 30px;
-}
-
-
-.home .visualizer .progress .progress-btn a:hover{
-    background: var(--primary-color);
-}
-
-.home .visualizer .progress .progress-btn a:hover .icon{
-    color: var(--text-color);
 } */
+
+.home .visualizer .progress{
+    display: grid;
+    position: absolute;
+    border: none;
+    border-radius: 25px;
+    grid-template-columns: 1fr 1fr 1fr;
+    bottom: 10px;
+    border: 2px solid var(--body-color);
+    background: var(--body-color);
+    height: 50px;
+    width: 180px;
+} 
+
+.home .visualizer .progress .progress-btn {
+    display: grid;
+    position: relative;
+    border: 2px solid var(--sidebar-color);
+    border-radius: 30px;
+    background: var(--primary-color);
+    color: var(--text-color);
+    margin: 5px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.home .visualizer .progress .progress-btn:hover{
+    background: var(--console-block);
+    transition: var(--tran-02);
+    box-shadow: 1px 1px 5px var(--primary-color);
+}
+
+.home .visualizer .progress .progress-btn:active{
+    background: var(--button);
+}
+
+
 
