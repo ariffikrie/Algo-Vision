@@ -18,7 +18,8 @@ const body = document.querySelector("body"),
             modeText.innerText = "Light Mode"
         }
       })
-
+    
 function navigateTo(page) {
     window.location.href = page;
 }
+
