@@ -24,50 +24,52 @@
             <i class='bx bx-chevron-right toggle'></i>    
         </header>
 
-        <div class="menu-bar">
+        <ul class="menu-bar">
             <div class="menu">
                 <li class="search-box">
                     <i class='bx bx-search-alt icon' ></i>
                     <input type="search" placeholder="Search">
                 </li>
                 <ul class="menu-links">
-                    <li class="menu-item">
-                        <a href="#" class="menu-link" onclick="navigateTo('../index.html')">
+                    <!-- <li class="menu-item">
+                        <a href="#" onclick="navigateTo('../index.html')">
                             <i class='bx bx-home-alt icon' ></i>
                             <span class="text nav-text">Home</span>
                         </a>
                     </li>
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">
+                    <li class="menu-item" id="algo-1">
+                        <button href="#">
                             <i class='bx bx-code-block icon' ></i>
                             <span class="text nav-text">Backtracking</span>
-                        </a>
-                        <i class='bx bx-chevron-down arrow'></i>
+                            <i class='bx bx-chevron-down arrow'></i>
+                        </button>
                     </li>
-                    <ul class="sub-menu">
-                        <li><a href="#">Alpha</a></li>
-                        <li><a href="#">Beta</a></li>
-                        <li><a href="#">Gamma</a></li>
-                    </ul>
-                    <li class="menu-item" >
-                        <a href="#" class="menu-link">
+                    <div>
+                        <ul class="sub-menu" id="dropDown-1">
+                            <li><a href="#">Alpha</a></li>
+                            <li><a href="#">Beta</a></li>
+                            <li><a href="#">Gamma</a></li>
+                        </ul>
+                    </div>
+                    <li class="menu-item" id="algo-2">
+                        <a href="#">
                             <i class='bx bx-code-block icon' ></i>
                             <span class="text nav-text">Divide and Conquer</span>
                         </a>
                         <i class='bx bx-chevron-down arrow'></i>
                     </li>
-                    <ul class="sub-menu">
+                    <ul class="sub-menu" id="dropDown-2">
                         <li><a href="#">Alpha</a></li>
                         <li><a href="#">Beta</a></li>
                     </ul>
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">
+                    <li class="menu-item" id="algo-3">
+                        <a href="#">
                             <i class='bx bx-code-block icon' ></i>
                             <span class="text nav-text">Recursive</span>
                         </a>
                         <i class='bx bx-chevron-down arrow'></i>
                     </li>
-                    <ul class="sub-menu">
+                    <ul class="sub-menu" id="dropDown-3">
                         <li><a href="#">Alpha</a></li>
                     </ul>
                     <li class="menu-item">
@@ -75,8 +77,8 @@
                             <i class='bx bxl-github icon'></i>
                             <span class="text nav-text">Github</span>
                         </a>
-                    </li>                    
-                </ul>
+                    </li>                     -->
+                </ul> 
             </div>
             <div class="bottom-context">
                 <li class="">
@@ -98,7 +100,7 @@
                     </div>
                 </li>
             </div>
-        </div>
+        </ul>
     </nav>
 
     <section class="home">

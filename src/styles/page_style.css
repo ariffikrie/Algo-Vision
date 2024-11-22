@@ -99,13 +99,17 @@ body.light{
 } */
 
 /* need to remove display;none later */
-.menu-links .sub-menu{
-    display: none; 
-    margin: 0; 
-    padding: 0; 
-    height: 0; 
-    overflow: hidden;
+.menu-item .sub-menu{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: var(--tran-06);
+    /* overflow: hidden; */
 }
+
+/* .menu-item .sub-menu.open{
+    background: red;
+    display: block;
+} */
 
 .menu-links .sub-menu li a{
     padding: 15px 10px 14px 40px;
@@ -140,6 +144,7 @@ body.light{
     justify-content: center;
     min-width: 55px;
     font-size: 20px;
+    list-style: none;
 }
 
 .sidebar li .icon,
@@ -329,8 +334,6 @@ body.light .switch::before{
     width: calc(100% - 250px);
     background: var(--body-color);
     transition: var(--tran-05);
-    /* justify-content: space-evenly;
-    align-content: space-evenly; */
 }
 
 .home .text{
@@ -392,18 +395,6 @@ body.light .switch::before{
     grid-area: footer;
 }
 
-/* .home .visualizer button{
-    display: flex;
-    position: absolute;
-    border-radius: 25px;
-    grid-template-columns: 1fr 1fr 1fr;
-    bottom: 10px;
-    border: 2px solid var(--body-color);
-    background: var(--body-color);
-    height: 50px;
-    width: 180px;
-} */
-
 .home .visualizer .progress{
     display: grid;
     position: absolute;
@@ -438,6 +429,3 @@ body.light .switch::before{
 .home .visualizer .progress .progress-btn:active{
     background: var(--button);
 }
-
-
-
