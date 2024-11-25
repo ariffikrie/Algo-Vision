@@ -105,7 +105,7 @@ body {
     height: 50px;
 }
 
-.popup .content{
+.popups .content{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -120,7 +120,7 @@ body {
     border-radius: 20px;
 }
 
-.popup .close-btn{
+.popups .content .close-btn{
     position: absolute;
     right: 20px;
     top: 20px;
@@ -135,19 +135,26 @@ body {
     cursor: pointer;
 }
 
-.popup.active .content{
+.popups.active .content{
     display: block;
     display: grid;
 } 
 
-.popup.active .content{
+.popups.active .content{
     transition: all 0.3s ease-in-out;
     transform: translate(-50%, -50%) scale(1);
+    grid-template-columns: 0.8fr 1.2fr;
+    border: 2px solid var(--body-color)
 }
 
-.popup.active .content .center.popup{
+.popups.active .content .center-popup{
+    background: var(--primary-color-light);
+    margin: 2px;
+    padding: 2px;
+    border: 2px solid var(--button);
+    border-radius: 10px;
+}
+
+.popups.active .content .center-popup .contributor-detail{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    background: red;
-    border: 2px solid var(--primary-color);
 }

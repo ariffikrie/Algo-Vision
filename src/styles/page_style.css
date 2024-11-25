@@ -219,6 +219,7 @@ body.light .sidebar header .toggle{
 
 .sidebar.close input{
     display: none;
+    overflow: none;
 }
 
 .sidebar li a{
@@ -226,6 +227,7 @@ body.light .sidebar header .toggle{
     width: 100%;
     display: flex;
     align-items: center;
+    /* justify-content: center; */
     text-decoration: none;
     border-radius: 6px;
     transition: var(--tran-03);
@@ -251,6 +253,9 @@ body.light .sidebar li a:hover .text{
     flex-direction: column;
     justify-content: space-between;
 }
+
+
+/* mode setup and all*/
 
 .menu-bar .mode{
     position: relative;
