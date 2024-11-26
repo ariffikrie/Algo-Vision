@@ -4,6 +4,8 @@ const body = document.querySelector("body"),
       searchBtn = document.querySelector(".search-box"),
       modeSwitch = document.querySelector(".toggle-switch"),
       modeText = document.querySelector(".mode-text");
+      toggleButton = document.querySelector('.toggle-btn');
+      // sidebar =document.getElementById('sidebar');
 
       toggle.addEventListener("click", () =>{
         sidebar.classList.toggle("close")
@@ -19,6 +21,11 @@ const body = document.querySelector("body"),
         }
       })
 
-function navigateTo(page) {
-    window.location.href = page;
-}
+      function navigateTo(page) {
+          window.location.href = page;
+      }
+
+      function toggleSubMenu(button) {
+          button.nextElementSibling.classList.toggle("show");
+          button.classList.toggle("rotate");
+      }

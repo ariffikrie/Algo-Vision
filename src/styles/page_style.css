@@ -16,6 +16,7 @@
     --text-color: #FBFBFB;
     --console-text: #FAF0E6;
     --console-block: #3C3D37;
+    --button: #AF1740;
 
     --tran-01: all 0.1s ease;
     --tran-02: all 0.2s ease;
@@ -47,8 +48,8 @@ body.light{
     top: 0;
     left: 0;
     height: 100%;
-    width: 250px;
-    padding: 10px 14px;
+    width: 260px;
+    padding: 10px 12px;
     background: var(--sidebar-color);
     transition: var(--tran-05);
     z-index: 100;
@@ -59,28 +60,35 @@ body.light{
 }
 
 /* Adjustable CSS */
+
 .sidebar .text{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--text-color);
     transition: var(--tran-01);
-    white-space: nowrap;
+    /* white-space: nowrap; */
     opacity: 1;
 }
 
 .sidebar.close .text{
     opacity: 0;
+    display: none;
+}
+
+.sidebar .menu-bar .menu{
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar .image{
     min-width: 60px;
-    display: flex;
+    /* display: flex; */
     align-items: center;
 }
 
 .sidebar li{
-    height: 45px;
-    margin-top: 10px;
+    height: 40px;
+    margin-top: 5px;
     list-style: none;
     display: flex;
     align-items: center;
@@ -90,8 +98,9 @@ body.light{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 60px;
+    min-width: 55px;
     font-size: 20px;
+    list-style: none;
 }
 
 .sidebar li .icon,
@@ -105,7 +114,7 @@ body.light{
 }
 
 .sidebar .image-text img{
-    width: 50px;
+    width: 60px;
     height: 40px;
     border-radius: 6px;
 }
@@ -113,6 +122,7 @@ body.light{
 .sidebar header .image-text{
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 
 header .image-text .header-text{
@@ -163,11 +173,17 @@ body.light .sidebar header .toggle{
     background: var(--primary-color-light);
 }
 
+.sidebar.close input{
+    display: none;
+    overflow: none;
+}
+
 .sidebar li a{
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
+    /* justify-content: center; */
     text-decoration: none;
     border-radius: 6px;
     transition: var(--tran-03);
@@ -193,6 +209,9 @@ body.light .sidebar li a:hover .text{
     flex-direction: column;
     justify-content: space-between;
 }
+
+
+/* mode setup and all*/
 
 .menu-bar .mode{
     position: relative;
@@ -230,7 +249,7 @@ body.light .menu-bar .mode i.moon{
     align-items: center;
     justify-content: center;
     height: 100%;
-    min-width: 60px;
+    min-width: 65px;
     cursor: pointer;
     border-radius: 6px;
     background: var(--primary-color);
@@ -272,17 +291,15 @@ body.light .switch::before{
     "footer footer";
     gap: 0.05rem;
     height: 100vh;
-    left: 250px;
+    left: 260px;
     width: calc(100% - 250px);
     background: var(--body-color);
     transition: var(--tran-05);
-    /* justify-content: space-evenly;
-    align-content: space-evenly; */
 }
 
 .home .text{
     grid-area: text;
-    font-size: 30px;
+    font-size: 35px;
     text-transform: uppercase;
     text-align: center;
     font-weight: 500;
@@ -342,6 +359,7 @@ body.light .switch::before{
 .home .visualizer .progress{
     display: grid;
     position: absolute;
+    border: none;
     border-radius: 25px;
     grid-template-columns: 1fr 1fr 1fr;
     bottom: 10px;
@@ -349,9 +367,9 @@ body.light .switch::before{
     background: var(--body-color);
     height: 50px;
     width: 180px;
-}
+} 
 
-.home .visualizer .progress .progress-btn .icon{
+.home .visualizer .progress .progress-btn {
     display: grid;
     position: relative;
     border: 2px solid var(--sidebar-color);
@@ -360,25 +378,15 @@ body.light .switch::before{
     color: var(--text-color);
     margin: 5px;
     font-size: 30px;
+    cursor: pointer;
 }
 
-/* .home .visualizer .progress .progress-btn a{
-    display: grid;
-    position: relative;
-    border: 2px solid var(--sidebar-color);
-    border-radius: 30px;
-    background: var(--primary-color);
-    color: var(--text-color);
-    margin: 5px;
-    font-size: 30px;
+.home .visualizer .progress .progress-btn:hover{
+    background: var(--console-block);
+    transition: var(--tran-02);
+    box-shadow: 1px 1px 5px var(--primary-color);
 }
 
-
-.home .visualizer .progress .progress-btn a:hover{
-    background: var(--primary-color);
+.home .visualizer .progress .progress-btn:active{
+    background: var(--button);
 }
-
-.home .visualizer .progress .progress-btn a:hover .icon{
-    color: var(--text-color);
-} */
-

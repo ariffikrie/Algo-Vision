@@ -6,8 +6,10 @@
     <title>Page</title>
     <link rel="stylesheet" href="./styles/page_style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 
 </head>
+
 <body>
     <nav class="sidebar close">
         <header>
@@ -20,49 +22,20 @@
                     <span class="name">Algo Vision</span>
                 </div>
             </div>
-
             <i class='bx bx-chevron-right toggle'></i>    
         </header>
 
-        <div class="menu-bar">
+        <ul class="menu-bar">
             <div class="menu">
                 <li class="search-box">
                     <i class='bx bx-search-alt icon' ></i>
                     <input type="search" placeholder="Search">
                 </li>
-                <ul class="menu-links">
-                    <li class="nav-links">
-                        <a href="#" onclick="navigateTo('../index.html')">
-                            <i class='bx bx-home-alt icon' ></i>
-                            <span class="text nav-text">Home</span>
-                        </a>
-                    </li>
-                    <li class="nav-links">
-                        <a href="">
-                            <i class='bx bx-code-block icon' ></i>
-                            <span class="text nav-text">Backtracking</span>
-                        </a>
-                    </li>
-                    <li class="nav-links">
-                        <a href="">
-                            <i class='bx bx-code-block icon' ></i>
-                            <span class="text nav-text">Divide and Conquer</span>
-                        </a>
-                    </li>
-                    <li class="nav-links">
-                        <a href="">
-                            <i class='bx bx-code-block icon' ></i>
-                            <span class="text nav-text">Recursive</span>
-                        </a>
-                    </li>
-                    <li class="nav-links">
-                        <a href="https://github.com/ariffikrie/Algo-Vision" target="_blank" rel="noopener noreferrer">
-                            <i class='bx bxl-github icon'></i>
-                            <span class="text nav-text">Github</span>
-                        </a>
-                    </li>                    
-                </ul>
             </div>
+
+            <!-- menu item -->
+
+            <!-- item for contact and theme setup -->
             <div class="bottom-context">
                 <li class="">
                     <a href="#" onclick="navigateTo('../src/credit.html')">
@@ -83,7 +56,7 @@
                     </div>
                 </li>
             </div>
-        </div>
+        </ul>
     </nav>
 
     <section class="home">
@@ -91,15 +64,15 @@
         <div class="visualizer">
             <span class="visualizer-text console-title">Visualizer</span>
             <div class="progress">
-                <div class="progress-btn">
+                <button class="progress-btn">
                     <i class='bx bx-play icon'></i>
-                </div>
-                <div class="progress-btn">
+                </button>
+                <button class="progress-btn">
                     <i class='bx bx-pause icon'></i>
-                </div>
-                <div class="progress-btn">
+                </button>
+                <button class="progress-btn">
                     <i class='bx bx-reset icon'></i>
-                </div>
+                </button>
             </div>
         </div>
         <div class="console">console</div>

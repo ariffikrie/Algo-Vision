@@ -5,13 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credits</title>
     <link rel="stylesheet" href="./styles/credit_style.css">
+    <link rel="icon" href="/images/algo-vision-high-resolution-logo.png" type="image/icon type">
 </head>
 <body>
-    <h1>Credits Page</h1>
-    <p>This page credits the contributors to the project.</p>
 
-    <button onclick="navigateTo('../index.html')">Back to Main Page</button>
+    <div class="main">
+        <div class="contributor">
+            <h1>Contributors</h1>
+            <div class="contributor-list">
+                <button onclick=togglePopup() class="contributor-item">
+                    <img src="../images/algo-vision-high-resolution-logo.png" alt="Developer 1">
+                    <h2>Developer 1</h2>
+                    <p>Developer 1 is a full stack developer with experience in web development.</p>
+                </button>
+                <button onclick=togglePopup() class="contributor-item">
+                    <img src="../images/algo-vision-high-resolution-logo.png" alt="Developer 2">
+                    <h2>Developer 2</h2>
+                    <p>Developer 2 is a full stack developer with experience in web development.</p>
+                </button>
+                <button onclick=togglePopup() class="contributor-item">
+                    <img src="../images/algo-vision-high-resolution-logo.png" alt="Developer 3">
+                    <h2>Developer 3</h2>
+                    <p>Developer 3 is a full stack developer with experience in web development.</p>
+                </button>
+            </div>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="popups" id="popup-1">
+            <div class="content">
+                <div class="close-btn" onclick=togglePopup()>&times;</div>
+                <div class="center-popup">
+                </div>
+                <div class="center-popup">
+                    <div class="contributor-detail">
+                    </div>
+                    <div class="contributor-detail">
+                        <div class="details"></div>
+                        <div class="details"></div>
+                        <div class="details"></div>
+                        <div class="details"></div>
+                        <div class="details"></div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <script src="script_2.js"></script>
 </body>
 </html>
