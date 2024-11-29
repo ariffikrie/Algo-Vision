@@ -1,32 +1,186 @@
+
 body {
     background-color: #f5deb3; /* Wheat */
     color: #333;
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
     height: 100%;
 }
 
+/*set content width based on screen size
+@media only screen and (min-width: 700px) {    
+    .page-content{
+        width: 80%;
+    }
+    
+}
+*/
+
+:root{
+    --body-color: #1A1A19;
+    --sidebar-color: #1A120B;
+    --sidebar-color2: #3C2A21;
+    --primary-color: #E5E5CB;
+    --primary-color2: #D5CEA3;
+    --primary-color-light: #A6AEBF;
+    --toggle-color: #D4F6FF;
+    --text-color: #FBFBFB;
+    --console-text: #FAF0E6;
+    --console-block: #3C3D37;
+
+    --tran-01: all 0.1s ease;
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+/* ------------------ scroll bar -------------------*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
+
+/*----------------- inner page content ------------------*/
 .page-content{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50vh 50vh;
+    justify-content: center;
+    grid-template-rows: 60vh 50vh;
     overflow: hidden;
+    transition: all .5s;
 
 }
+
+
+/*---------------- Side Bar --------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.side-bar{
+    position: fixed; /* guna untuk layer on top */
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #042331;
+    transition: all .5s ease;
+}
+
+.side-bar header{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #063146;
+    user-select: none;
+}
+
+.side-bar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 20%;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+
+ul li:hover a{
+    padding-left: 25%;
+}
+
+#check{
+    display: none;
+}
+
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background: #042331;
+    border-radius: 3px;
+}
+
+label #btn{
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all .5s ease;
+}
+
+label #cancel{
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: #0a5275;
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+
+#check:checked ~ .side-bar{
+    left: 0;
+}
+
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel{
+    left: 195px;
+}
+
+#check:checked ~ .page-content{
+    margin-left: 250px;
+}
+
+/*------------------ content ----------------*/
 
 .upper-part{
     overflow: hidden;
-    background-color: aqua;
+    grid-column: 2;
+    grid-row: 1;
+    background-color: var(--primary-color);
 }
 .lower-part{
     display: grid;
-    grid-template-columns: 200px auto 100px;
+    grid-column: 2;
+    grid-row: 2;
+    grid-template-columns: 70% 30%;
     grid-gap: 1rem;
     overflow: hidden;
-    background-color: greenyellow;
+    background-color: var(--primary-color2);
 }
 
+
+/*
 .left{
     display: flex;
     align-items: center; 
@@ -41,6 +195,7 @@ body {
         font-weight: 600;
     }
 }
+*/
 
 .middle{
     /*display: flex;*/
@@ -56,6 +211,8 @@ body {
     }
 }
 
+
+/*
 .right{
     display: flex;
     flex-direction: column;
@@ -64,8 +221,6 @@ body {
     .intro-btn{
         background-color: beige;
         position: absolute;
-        /*z-index: 10;
-        bottom: 10%;*/
         right: 3%;
         .intro{
             background-color: #d2691e;
@@ -81,15 +236,5 @@ body {
         }
     }
 }
-button {
-    background-color: #cd853f; /* Peru */
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
-button:hover {
-    background-color: #d2691e;
-}
+*/
