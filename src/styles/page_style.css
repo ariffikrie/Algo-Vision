@@ -183,7 +183,6 @@ body.light .sidebar header .toggle{
     width: 100%;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     text-decoration: none;
     border-radius: 6px;
     transition: var(--tran-03);
@@ -192,6 +191,14 @@ body.light .sidebar header .toggle{
 .sidebar li a:hover{
     background: var(--primary-color);
 }
+
+.sidebar li a:active{
+    background: var(--body-color);
+}
+
+/* .sidebar li a:active{
+    background: var(--console-block);
+} */
 
 .sidebar li a:hover .icon,
 .sidebar li a:hover .text{
@@ -210,7 +217,58 @@ body.light .sidebar li a:hover .text{
     justify-content: space-between;
 }
 
+/* item for dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    /* justify-content: flex-start; */
+}
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--console-block);
+    min-width: 237px;
+    left: 248px;
+    /* border: 2px solid var(--primary-color); */
+    padding: 0 1px 0 1px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.sidebar.close .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--console-block);
+    min-width: 237px;
+    left: 76px;
+    /* border: 2px solid var(--primary-color); */
+    padding: 0 1px 0 1px;
+    /* justify-content: center; */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    border: 2px solid var(--primary-color);
+    /* gap: 2px; */
+    /* display: block; */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--primary-color);
+}
 
 /* mode setup and all*/
 
