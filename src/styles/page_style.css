@@ -32,12 +32,12 @@ body {
 }
 
 body.light{
-    --body-color: #C6E7FF;
-    --sidebar-color: #D4F6FF;
+    --body-color: #9db7cf;
+    --sidebar-color: #d8e6e1;
     --primary-color: #a3a8ae;
-    --primary-color-light: #91bad8;
+    --primary-color-light: #7eabd9;
     --toggle-color: #73a5c6;
-    --text-color: #707070;
+    --text-color: #223148;
     --console-text: #FAF0E6;
     --console-block: #3C3D37;
 }
@@ -228,7 +228,7 @@ body.light .sidebar li a:hover .text{
     color: var(--text-color);
     padding: 12px 16px;
     text-decoration: none;
-    border: 2px solid var(--primary-color);
+    /* border: 2px solid var(--primary-color); */
     /* gap: 2px; */
     /* display: block; */
 }
@@ -236,7 +236,7 @@ body.light .sidebar li a:hover .text{
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: var(--console-block);
+    background-color: var(--sidebar-color);
     min-width: 237px;
     left: 230px;
     padding: 0 1px 0 1px;
