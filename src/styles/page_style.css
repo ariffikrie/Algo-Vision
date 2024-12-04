@@ -240,6 +240,7 @@ body.light .sidebar li a:hover .text{
     min-width: 237px;
     left: 230px;
     padding: 0 1px 0 1px;
+    border-radius: 7px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
