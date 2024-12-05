@@ -137,7 +137,7 @@ body.light{
     top: 20px;
     width: 30px;
     height: 30px;
-    background: var(--primary-color);
+    background: var(--sidebar-color);
     font-size: 20px;
     font-weight: 600;
     line-height: 30px;
