@@ -491,3 +491,15 @@ body.light .switch::before{
     border-radius: 15px;
     z-index: 1;
 }
+
+/* description box */
+
+/* .info-tab{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    color: red;
+    z-index: 20;
+} */
