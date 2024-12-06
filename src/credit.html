@@ -5,9 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credits</title>
     <link rel="stylesheet" href="./styles/credit_style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="/images/algo-vision-high-resolution-logo.png" type="image/icon type">
 </head>
 <body>
+
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../images/algo-vision-high-resolution-logo.png" alt="logo">
+                </span>
+
+                <div class="text header-text">
+                    <span class="name">Algo Vision</span>
+                </div>
+            </div>
+            <i class='bx bx-menu toggle'></i>    
+        </header>
+
+        <ul class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class='bx bx-search-alt icon' ></i>
+                    <input type="search" placeholder="Search">
+                </li>
+                <li class="">
+                    <a href="#" onclick="navigateTo('../src/landing_page.html')">
+                        <i class='bx bx-home icon'></i>
+                        <span class="text nav-text">Home</span>
+                    </a>
+                </li>
+                <!-- menu item -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">
+                        <i class='bx bx-bar-chart-square icon'></i>
+                        <span class="text nav-text">Divide and Conquer</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Bucket Sort</a>
+                        <a href="#">Quick Sort</a>
+                        <a href="#">Merge Sort</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">
+                        <i class='bx bxs-component icon'></i>
+                        <span class="text nav-text">Dynamic Programming</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Fibonacci Sequence</a>
+                        <a href="#">Nth Factorial</a>
+                        <a href="#">Longest Palindrome</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">
+                        <i class='bx bx-minus-back icon'></i>
+                        <span class="text nav-text">Backtracking</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Sums of Subsets</a>
+                        <a href="#">Tug of War</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">
+                        <i class='bx bx-code-alt icon'></i>
+                        <span class="text nav-text">Branch</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Binary Search</a>
+                        <a href="#">Binary Search Tree</a>
+                        <a href="#">Topological Sort</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">
+                        <i class='bx bx-math icon'></i>
+                        <span class="text nav-text">Simple Recursive</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Euclidean GCD</a>
+                        <a href="#">LCS</a>
+                    </div>
+                </li>
+                <li class="">
+                    <a href="https://github.com/ariffikrie/Algo-Vision" target="_blank">
+                        <i class='bx bxl-github icon'></i>
+                        <span class="text nav-text">Github</span>
+                    </a>
+                </li>
+            </div>
+            
+            <!-- item for contact and theme setup -->
+            <div class="bottom-context">
+                <li class="">
+                    <a href="#" onclick="navigateTo('../src/credit.html')">
+                        <i class='bx bxl-linkedin icon' ></i>
+                        <span class="text nav-text">Credit</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="moon-sun">
+                        <i class='bx bx-moon icon moon' ></i>
+                        <i class='bx bx-sun icon sun' ></i>
+                    </div>
+                    <span class="mode-text text"> Light Mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </ul>
+    </nav>
+
+    <!-- <button class="popup-menu"><i class='bx bx-menu toggle'></i></button> -->
 
     <div class="main">
         <div class="contributor">

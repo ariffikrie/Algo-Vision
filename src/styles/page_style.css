@@ -32,12 +32,12 @@ body {
 }
 
 body.light{
-    --body-color: #C6E7FF;
-    --sidebar-color: #D4F6FF;
+    --body-color: #9db7cf;
+    --sidebar-color: #d8e6e1;
     --primary-color: #a3a8ae;
-    --primary-color-light: #91bad8;
+    --primary-color-light: #7eabd9;
     --toggle-color: #73a5c6;
-    --text-color: #707070;
+    --text-color: #223148;
     --console-text: #FAF0E6;
     --console-block: #3C3D37;
 }
@@ -183,7 +183,6 @@ body.light .sidebar header .toggle{
     width: 100%;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     text-decoration: none;
     border-radius: 6px;
     transition: var(--tran-03);
@@ -192,6 +191,14 @@ body.light .sidebar header .toggle{
 .sidebar li a:hover{
     background: var(--primary-color);
 }
+
+.sidebar li a:active{
+    background: var(--body-color);
+}
+
+/* .sidebar li a:active{
+    background: var(--console-block);
+} */
 
 .sidebar li a:hover .icon,
 .sidebar li a:hover .text{
@@ -210,7 +217,63 @@ body.light .sidebar li a:hover .text{
     justify-content: space-between;
 }
 
+/* item for dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    /* justify-content: flex-start; */
+}
 
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    /* border: 2px solid var(--primary-color); */
+    /* gap: 2px; */
+    /* display: block; */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--sidebar-color);
+    min-width: 237px;
+    left: 230px;
+    padding: 0 1px 0 1px;
+    border-radius: 7px;
+    box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.sidebar.close .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--sidebar-color);
+    min-width: 237px;
+    left: 62px;
+    padding: 0 1px 0 1px;
+    box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content:hover {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--primary-color);
+}
 
 /* mode setup and all*/
 
@@ -292,6 +355,8 @@ body.light .switch::before{
     "footer footer";
     gap: 0.05rem;
     height: 100vh;
+    /* margin: 5px; */
+    padding: 0 3px 0 3px ;
     left: 260px;
     width: calc(100% - 250px);
     background: var(--body-color);
@@ -319,38 +384,38 @@ body.light .switch::before{
     position: relative;
     text-align: center;
     font-size: 20px;
-    margin: 10px;
+    margin: 13px;
     padding-top: 5px;
     padding-left: 5px;
     padding-right: 5px;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
     border-radius: 15px;
     color: var(--console-text);
-    font-weight: 200;
+    font-weight: 500;
 }
 
 .home .console{
     grid-area: console;
     background: var(--console-block);
     text-align: center;
-    margin: 10px;
+    margin: 13px;
     padding: 5px;
     font-size: 15px;
     border-radius: 15px;
     color: var(--console-text);
-    font-weight: 200;
+    font-weight: 400;
 }
 
 .home .code{
     grid-area: code;
     background: var(--console-block);
     text-align: center;
-    margin: 10px;
+    margin: 13px;
     padding: 5px;
     font-size: 15px;
     border-radius: 15px;
     color: var(--console-text);
-    font-weight: 200;   
+    font-weight: 400;   
 }
 
 .home .footer{
@@ -363,11 +428,13 @@ body.light .switch::before{
     border: none;
     border-radius: 25px;
     grid-template-columns: 1fr 1fr 1fr;
-    bottom: 10px;
+    top: -68px;
     border: 2px solid var(--body-color);
-    background: var(--body-color);
+    background: var(--console-block);
     height: 50px;
     width: 180px;
+    right: 60px;
+    z-index: 10;
 } 
 
 .home .visualizer .progress .progress-btn {
@@ -390,4 +457,37 @@ body.light .switch::before{
 
 .home .visualizer .progress .progress-btn:active{
     background: var(--button);
+}
+
+.home .visualizer .algo-container{
+    /* display: flex; */
+    position: relative;
+    width: 97%;
+    height: 95%;
+    /* top: 20px; */
+    margin: 15px;
+    /* padding: 10px; */
+    background: black;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.home .console .console-block{
+    position: relative;
+    width: 94%;
+    height: 85%;
+    margin: 15px;
+    background: black;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.home .code .code-block{
+    position: relative;
+    width: 94%;
+    height: 85%;
+    margin: 15px;
+    background: black;
+    border-radius: 15px;
+    z-index: 1;
 }
