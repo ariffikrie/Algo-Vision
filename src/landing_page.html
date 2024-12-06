@@ -23,23 +23,55 @@
             <li><a href="./credit.html">Credit Page</a></li>
         </ul>
     </div>
-
-    <section class="upper-part">
-        <div class="slider-wrapper">
-            <div class="slider">
-                <img id="slide-1" src="../images/Screenshot 2023-11-30 115510.png" alt="random1">
-                <img id="slide-2" src="../images/zu5_jikken.png" alt="random2">
-                <img id="slide-3" src="../images/zu6_jikken.png" alt="random3">
+    <div class="page-content">
+        <section class="upper-part">
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <img id='slide-1' src="../images/Screenshot 2023-11-30 115510.png" alt="random1">
+                    <img id='slide-2'src="../images/zu5_jikken.png" alt="random2">
+                    <img id='slide-3'src="../images/zu6_jikken.png" alt="random3">
+                </div>
+                <div class="slider-nav">
+                    <a href="#slide-1" id="btn1"></a>
+                    <a href="#slide-2" id="btn2"></a>
+                    <a href="#slide-3" id="btn3"></a>
+                </div>
             </div>
-            <div class="slider-nav">
-                <a href="#slide-1" id="btn1"></a>
-                <a href="#slide-2" id="btn2"></a>
-                <a href="#slide-3" id="btn3"></a>
+        </section>
+
+        <div class="lower-part">
+            <div class="intro-block">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Molestiae mollitia illo, id, sint explicabo reiciendis dolorum fugit saepe optio ea maxime repellat.
+                    Sequi dolores culpa ipsam odit aperiam. Earum, distinctio?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Molestiae mollitia illo, id, sint explicabo reiciendis dolorum fugit saepe optio ea maxime repellat.
+                    Sequi dolores culpa ipsam odit aperiam. Earum, distinctio?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Molestiae mollitia illo, id, sint explicabo reiciendis dolorum fugit saepe optio ea maxime repellat.
+                    Sequi dolores culpa ipsam odit aperiam. Earum, distinctio?
+                </p>
+            </div>
+
+            <div class="name-block">
+                <div class="algo">
+                    <h1>ALGO</h1>
+                </div>
+                <div class="vision">
+                    <h2>VISION</h2>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
 
+    <script type="text/javascript">
+        let images = document.querySelectorAll(img);
+        let dots = document.querySelectorAll(a);
+
+        var counter = 0;
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
