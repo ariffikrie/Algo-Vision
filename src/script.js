@@ -29,3 +29,10 @@ const body = document.querySelector("body"),
           button.nextElementSibling.classList.toggle("show");
           button.classList.toggle("rotate");
       }
+
+    function toggleInfo() {
+        const infoTab = document.querySelector(".info-tab");
+        infoTab.classList.toggle("show");
+    }
+
+
