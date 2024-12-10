@@ -137,6 +137,9 @@
                 <button class="progress-btn">
                     <i class='bx bx-reset icon'></i>
                 </button>
+                <button onclick=toggleInfo() class="progress-btn">
+                    <i class='bx bxs-info-circle icon'></i>
+                </button>
             </div>
             <div class="algo-container"></div>
         </div>
@@ -150,6 +153,30 @@
         </div>
         <div class="footer"></div>
     </section>
+
+
+    <div class="info-tab">
+        <div class="title">
+            <p1><span>ALGORITHM NAME</span></p1>
+        </div>
+        <div class="description">
+            <p>
+                An algorithm is a step-by-step procedure or a set of well-defined rules designed to perform a specific task or solve a particular problem. It is a fundamental concept in computer science and mathematics, where it serves as the basis for building efficient and effective solutions to a wide range of problems.
+            </p>
+            <p>
+                Algorithms can be represented in various forms, such as natural language, pseudocode, or programming code, and are characterized by their finiteness (they have a defined endpoint), definiteness (each step is precisely defined), and input/output requirements (they accept input data and produce desired outputs).
+            </p>
+            <p>
+                Algorithms are widely used in various fields, including computer science, mathematics, and engineering, to solve complex problems efficiently. They are essential for developing software applications, analyzing data, and designing systems that require high performance and reliability.
+            </p>
+            <p>
+                The effectiveness of an algorithm is often evaluated based on its time complexity (how fast it runs) and space complexity (how much memory it uses). Algorithms can be simple, such as basic arithmetic operations, or highly complex, like those used in artificial intelligence or quantum computing.
+            </p>
+        </div>
+        <button onclick=toggleInfo() class="progress-btn">
+            <i class='bx bx-exit exit'></i>
+        </button>
+    </div>
 
 
     <script src="script.js"></script>
