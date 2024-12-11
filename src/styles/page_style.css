@@ -535,7 +535,7 @@ body.light .switch::before{
     transition: var(--tran-06);
 }
 
-.info-tab.show .title{
+.info-tab.show .info-title{
     font-size: 20px;
     font-weight: 600;
     color: var(--text-color);
