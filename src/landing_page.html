@@ -123,21 +123,31 @@
     </nav>
 
     <div class="page-content">
-        <section class="upper-part">
-            <div class="slider-wrapper">
-                <div class="slider">
-                    <img id='slide-1' src="../images/Screenshot 2023-11-30 115510.png" alt="random1">
-                    <img id='slide-2'src="../images/zu5_jikken.png" alt="random2">
-                    <img id='slide-3'src="../images/zu6_jikken.png" alt="random3">
-                </div>
-                <div class="slider-nav">
-                    <a href="#slide-1" id="btn1"></a>
-                    <a href="#slide-2" id="btn2"></a>
-                    <a href="#slide-3" id="btn3"></a>
-                </div>
+        <div class="slide-container">
+            <div class="slides">
+                <img src="../images/Screenshot 2023-11-30 115510.png" class="active">
+                <img src="../images/zu5_jikken.png">
+                <img src="../images/zu6_jikken.png">
             </div>
-        </section>
 
+            <div class="buttons">
+                <span class="next">&#10095</span>
+                <span class="prev">&#10094</span>
+            </div>
+
+            <div class="dotsContainer">
+                <div class="dot active" attr="0"></div>
+                <div class="dot" attr="1"></div>
+                <div class="dot" attr="2"></div>
+            </div>
+            <div class="get-started">
+                <a href="#">Get Started</a>
+            </div>
+            <hr/>
+            <hr/>
+            <hr/>
+        </div>
+        
         <div class="lower-part">
             <div class="intro-block">
                 <p>
@@ -162,8 +172,87 @@
                 </div>
             </div>
         </div>
+
+        <div class="footer">
+            <h1><span>contributer</span></h1>
+            <div class="names">
+                <div class="arif">ariffikrie</div>
+                <div class="diyana">diyana</div>
+                <div class="faris">faris</div>
+            </div>
+        </div>
     </div>
 
+<!--start of Javascript-->
     <script src="script.js"></script>
+
+    <script type="text/javascript">
+        //access the Images
+        let slideImages = document.querySelectorAll('.slides img');
+        //access next and prev buttons
+        let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+        //access the indicators
+        let dots = document.querySelectorAll('.dot')
+
+        var counter = 0;
+
+        //code for next button
+        next.addEventListener('click', slideNext);
+        function slideNext(){
+            slideImages[counter].style.animation = 'next1 .5s ease-in forwards';
+            if(counter >= slideImages.length-1){
+                counter = 0;
+            }
+            else{
+                counter++;
+            }
+            slideImages[counter].style.animation = 'next2 .5s ease-in forwards';
+            indicators();
+        }
+
+        //code for prev button
+        prev.addEventListener('click', slidePrev);
+        function slidePrev(){
+            slideImages[counter].style.animation = 'prev1 .5s ease-in forwards';
+            if(counter == 0){
+                counter = slideImages.length-1;
+            }
+            else{
+                counter--;
+            }
+            slideImages[counter].style.animation = 'prev2 .5s ease-in forwards';
+            indicators();
+        }
+
+        //auto sliding
+        
+        function autoSliding(){
+            deletInterval = setInterval(timer, 1000);
+            function timer(){
+                slideNext();
+                indicators();
+            }
+        }
+        autoSliding();
+
+        //stop auto sliding when hover
+        const container = document.querySelector('.slide-container');
+        container.addEventListener('mouseover', function(){
+            clearInterval(deletInterval);
+        });
+
+        //resume sliding when mouse is out
+        container.addEventListener('mouseout', autoSliding);
+
+        //add and remove active class from indicators
+        function indicators(){
+            for(i = 0; i < dots.length; i++){
+                dots[i].className = dots[i].className.replace(' active', '');
+            }
+            dots[counter].className += ' active';
+        }
+            
+    </script>
 </body>
 </html>
