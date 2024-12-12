@@ -551,3 +551,6 @@ body.light .switch::before{
     text-orientation: upright;
 }
 
+@media (max-width: 1250px) {
+    /* … */
+  }
