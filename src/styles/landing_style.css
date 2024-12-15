@@ -2,8 +2,6 @@ body {
     background-color: #192021;
     color: #333;
     font-family: Arial, sans-serif;
-    padding: 0;
-    margin: 0;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -38,13 +36,6 @@ body.light{
     --tran-03: all 0.3s ease;
     --tran-04: all 0.4s ease;
     --tran-05: all 0.5s ease;
-}
-
-/* set content width based on screen size*/
-@media only screen and (min-width: 1500px) {    
-    body{
-        margin: 0 0;
-    }
 }
 
 /* ------------------ scroll bar -------------------*/
@@ -234,7 +225,7 @@ body.light .sidebar header .toggle{
 
 .sidebar li a{
     height: 100%;
-    width: 100%;
+    width: 88%;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -265,7 +256,7 @@ body.light .sidebar li a:hover .text{
 }
 
 .sidebar .menu-bar{
-    height: calc(100% - 50px);
+    height: calc(100% - 85px);
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -400,18 +391,21 @@ body.light .switch::before{
 
 /*--------page content setting------------*/
 .page-content{
+    position: relative;
     display: grid;
-    justify-content: center;
-    grid-template-rows: 2fr 1.4fr 0.5fr;
+    grid-template-rows: 30px 1.67fr 1.4fr 0.5fr;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 /*------------slide------------*/
 .slide-container{
     position: relative;
-    left: 150px;
+    grid-row: 2;
+    left: 20px;
     top: 20px;
-    width: 1100px;
+    width: 1220px;
     height: 700px;
     border: 3px solid #1c2c2e;
     border-radius: 4px;
@@ -567,19 +561,18 @@ hr{
 /*------------lower part---------------*/
 .lower-part{
     display: grid;
-    grid-row: 2;
-    grid-template-columns: 2.5fr 0.5fr;
-    justify-content: center;
-    padding: 0 0;
+    grid-row: 3;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 0 70px;
 }
 
 .intro-block{
-    display: flex;
+    display: grid;
     position: relative;
-    left: 200px;
+    grid-column: 1;
 }
 .intro-block p{
-    background-color: #121212;
+    background-color: #3a3f4dfd;
     margin: 10px; /*padding luar*/
     border-radius: 15px;
     grid-column: 1;
@@ -591,38 +584,43 @@ hr{
 }
 
 .name-block{
-    grid-column: 2;
+    position: relative;
+    grid-column: span 2;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-content: center;
-    top: 50px;
 }
 
-.algo{
-    position: relative;
-    left: 150px;
+.name-block .algo{
+    grid-column: 2;
 }
 
-.vision{
-    position: relative;
-    width: 50%;
+.name-block .vision{
+    grid-column: 3;
 }
-.algo h1{
+
+/* .algo h1, .vision h2{
     font-family: 'Times New Roman', Times, serif;
     text-transform: uppercase;
-    font-size: 90px;
+    font-size: 150px;
     font-weight: 800;
     writing-mode: vertical-lr;
     text-orientation: upright;
     position: relative;
-    /* color: #b1e0e5; */
     color: white;
     -webkit-text-stroke: 3px grey;
-    /* -webkit-text-stroke: 3px #73a5c6; */
-}
+} */
 
-.vision h2{
+.name-block span{
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-size: 100px;
+    font-weight: 800;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    color: #b1e0e5;
+    -webkit-text-stroke: 3px #73a5c6;
+}
+/* .vision h2{
     font-family: 'Times New Roman', Times, serif;
     text-transform: uppercase;
     font-size: 90px;
@@ -631,15 +629,14 @@ hr{
     text-orientation: upright;
     color: #b1e0e5;
     -webkit-text-stroke: 3px #73a5c6;
-}
+} */
 
 /*---------footer-------------*/
 .footer{
+    grid-row: 4;
     display: block;
     background-color: #1c2c2e;
     color: #b1e0e5;
-    /* justify-content: center;
-    align-items: center; */
     width: 100%;
     padding: 0;
     margin: 0;
@@ -667,4 +664,40 @@ hr{
     height: 80px;
     width: 80px;
     border-radius: 50%;
+}
+
+.top{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.top span{
+    grid-column: 2;
+    padding: 0 50px;
+    width: fit-content;
+    font-size: 45px;
+    color: #32b8c6;
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+}
+/* set content width based on screen size*/
+@media only screen and (min-width: 1400px) {    
+    body, .page-content{
+        max-width: 100%;
+    }
+    .page-content{
+        grid-template-rows: 30px 1.7fr 1.4fr 0.5fr;
+    }
+    .slide-container{
+        width: 1860px
+    }
+    .lower-part{
+        grid-template-columns: 3fr 1fr 1fr;
+        margin: 0 100px;
+    }
+    .lower-part .intro-block p{
+        width: 900px;
+        padding: 30px;
+    }
 }
