@@ -1,3 +1,10 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #192021;
     color: #333;
@@ -668,7 +675,3 @@ hr{
     width: 80px;
     border-radius: 50%;
 }
-
-@media (max-width: 200px) {
-    /* … */
-  }
