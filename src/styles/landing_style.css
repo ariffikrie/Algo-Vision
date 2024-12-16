@@ -633,11 +633,6 @@ hr{
     -webkit-text-stroke: 3px #73a5c6;
 }
 
-<<<<<<< HEAD
-@media (max-width: 1250px) {
-    /* … */
-  }
-=======
 /*---------footer-------------*/
 .footer{
     display: block;
@@ -673,4 +668,7 @@ hr{
     width: 80px;
     border-radius: 50%;
 }
->>>>>>> 47fe554ec3c3b2cd4e65b8bf7d4f1e49fa77ea6c
+
+@media (max-width: 200px) {
+    /* … */
+  }
